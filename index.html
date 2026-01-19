@@ -3,9 +3,311 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Donuts</title>
+  <title>Crave-Kill Donuts</title>
+
+  <style>
+    :root{
+      --bg:#0b0b10;
+      --card:#151520;
+      --text:#ffffff;
+      --muted:#b7b7c7;
+      --line:#232336;
+      --accent:#ff3b30;
+      --accent2:#ffd60a;
+    }
+
+    *{box-sizing:border-box;}
+
+    body{
+      margin:0;
+      font-family: Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    .wrap{
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    .top{
+      display:flex;
+      gap: 24px;
+      align-items: stretch;
+      flex-wrap: wrap;
+    }
+
+    .hero{
+      flex: 1 1 520px;
+      padding: 24px;
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, #12121a 0%, #0b0b10 100%);
+      border-radius: 16px;
+    }
+
+    .badge{
+      display:inline-block;
+      font-weight: 700;
+      font-size: 12px;
+      letter-spacing: .4px;
+      padding: 8px 10px;
+      border-radius: 999px;
+      background: rgba(255,59,48,.15);
+      border: 1px solid rgba(255,59,48,.35);
+      color: #ffd1cf;
+    }
+
+    h1{
+      margin: 14px 0 10px;
+      font-size: 44px;
+      line-height: 1.05;
+    }
+
+    .sub{
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    .ctaRow{
+      display:flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 14px;
+    }
+
+    .btn{
+      display:inline-block;
+      padding: 14px 18px;
+      border-radius: 12px;
+      border: 0;
+      font-weight: 800;
+      font-size: 15px;
+      cursor: pointer;
+      text-decoration:none;
+      text-align:center;
+    }
+
+    .btnPrimary{
+      background: var(--accent2);
+      color: #111;
+    }
+
+    .btnGhost{
+      background: transparent;
+      border: 1px solid var(--line);
+      color: var(--text);
+    }
+
+    .proof{
+      margin-top: 14px;
+      display:flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .card{
+      flex: 1 1 360px;
+      padding: 24px;
+      border: 1px solid var(--line);
+      background: var(--card);
+      border-radius: 16px;
+    }
+
+    .card h2{
+      margin: 0 0 10px;
+      font-size: 18px;
+    }
+
+    .ul{
+      margin: 0;
+      padding-left: 18px;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    .price{
+      display:flex;
+      align-items: baseline;
+      gap: 10px;
+      margin: 10px 0 14px;
+    }
+
+    .now{
+      font-size: 30px;
+      font-weight: 900;
+      color: var(--accent2);
+    }
+
+    .was{
+      color: var(--muted);
+      text-decoration: line-through;
+      font-size: 14px;
+    }
+
+    .grid{
+      margin-top: 18px;
+      display:grid;
+      gap: 14px;
+      grid-template-columns: repeat(12, 1fr);
+    }
+
+    .g{
+      grid-column: span 12;
+      padding: 18px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.02);
+      border-radius: 16px;
+    }
+
+    @media (min-width: 800px){
+      .g.half{grid-column: span 6;}
+      .g.third{grid-column: span 4;}
+    }
+
+    .kicker{
+      font-size: 12px;
+      letter-spacing: .4px;
+      color: var(--muted);
+      text-transform: uppercase;
+      margin: 0 0 8px;
+    }
+
+    .g h3{
+      margin: 0 0 8px;
+      font-size: 18px;
+    }
+
+    .g p{
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    .footerCta{
+      margin-top: 18px;
+      padding: 18px;
+      border-radius: 16px;
+      border: 1px dashed rgba(255,214,10,.45);
+      background: rgba(255,214,10,.08);
+      display:flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .tiny{
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.45;
+      margin-top: 12px;
+    }
+  </style>
 </head>
+
 <body>
-  <h1>HELLO DONUTS</h1>
+  <div class="wrap">
+    <div class="top">
+      <div class="hero">
+        <span class="badge">LIMITED DROP • TODAY ONLY</span>
+
+        <h1>Stop eating “normal” donuts.</h1>
+
+        <h1>Eat the ones that don’t wreck you.</h1>
+
+        <p class="sub">
+          Crave-Kill is a donut box built to crush the 3 problems people hate:
+          sugar crash, sticky guilt, and “why did I do that?” regret.
+        </p>
+
+        <div class="ctaRow">
+          <a class="btn btnPrimary" href="#order">Get The Donut Box</a>
+          <a class="btn btnGhost" href="#whatsinside">See What’s Inside</a>
+        </div>
+
+        <div class="proof">
+          <div>✔️ Ready in 15 minutes</div>
+          <div>✔️ Same-day pickup</div>
+          <div>✔️ “No crash” recipe</div>
+        </div>
+      </div>
+
+      <div class="card" id="order">
+        <h2>The Donut Box Offer</h2>
+
+        <div class="price">
+          <div class="now">$29</div>
+          <div class="was">$59</div>
+        </div>
+
+        <ul class="ul">
+          <li>12 donuts (your choice of 6 flavors)</li>
+          <li>2 “Crave-Kill” sauce packs</li>
+          <li>1 “No Crash” snack guide</li>
+          <li>Bonus: 1 free box next week if you hate them</li>
+        </ul>
+
+        <div class="ctaRow" style="margin-top:16px;">
+          <a class="btn btnPrimary" href="mailto:order@yourdomain.com?subject=Donut%20Box%20Order">Order Now</a>
+          <a class="btn btnGhost" href="#guarantee">Read Guarantee</a>
+        </div>
+
+        <div class="tiny">
+          This is a demo button.  
+          Later we can connect a real checkout link.
+        </div>
+      </div>
+    </div>
+
+    <div class="grid" id="whatsinside">
+      <div class="g third">
+        <div class="kicker">Problem</div>
+        <h3>Your donut = sugar spike → crash.</h3>
+        <p>That “sleepy + hungry again” feeling is the trap.</p>
+      </div>
+
+      <div class="g third">
+        <div class="kicker">Fix</div>
+        <h3>Slow carbs + protein balance.</h3>
+        <p>Built to hit “sweet” without the smash.</p>
+      </div>
+
+      <div class="g third" id="guarantee">
+        <div class="kicker">Guarantee</div>
+        <h3>Love it or we buy you lunch.</h3>
+        <p>If you don’t like the box, we refund you and shout lunch.</p>
+      </div>
+
+      <div class="g half">
+        <div class="kicker">What you get</div>
+        <h3>6 flavors people actually crave.</h3>
+        <p>Glaze, choc, cinnamon, berry, caramel, and “midnight.”</p>
+      </div>
+
+      <div class="g half">
+        <div class="kicker">Who it’s for</div>
+        <h3>People who want donuts… without the regret.</h3>
+        <p>If you’ve ever said “I’ll start Monday,” this is for you.</p>
+      </div>
+    </div>
+
+    <div class="footerCta">
+      <div>
+        <div style="font-weight:900; font-size:16px;">Want the box?</div>
+        <div class="tiny">Click the button. We’ll set pickup time.</div>
+      </div>
+
+      <a class="btn btnPrimary" href="#order">Get The Donut Box</a>
+    </div>
+
+    <div class="tiny">
+      Next upgrades: real checkout link, images, and a proper logo.
+    </div>
+  </div>
 </body>
 </html>
